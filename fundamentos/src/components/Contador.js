@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+// Replicar comportamiento de redux
+
 class Contador extends Component {
     constructor(props) {
       super(props);
