@@ -4,7 +4,7 @@ Este es un repositorio para aprender a utilizar la librería React.
 En él voy subiendo ejemplos de los conceptos de react que voy aprendiendo a medida que vpy completando el curso.
 Sirve a modo de apuntes
 
-## Estructura
+## Funcionamiento
 Cada uno de los directorios que hay en la carpeta raíz es un módulo npm así que para arrancarlo habrá que cambiar
 la ubicación al directorio deseado (cd <directorio> e instalar sus dependencias:
 ```shell script
