@@ -1,6 +1,7 @@
 import './App.css';
 import Bienvenida from './components/Bienvenida';
 import Contador from './components/Contador';
+import MisChildren from './components/MisChildren';
 import Saludo from './components/Saludo';
 
 function App() {
@@ -20,7 +21,24 @@ function App() {
       <h1 class="ejercicio">Ejercicio 3</h1>
   
       <Bienvenida nombreUsuario="Berta"/>
-    </div>
+      <hr/>
+
+      <h1 class="ejercicio">Ejercicio 4</h1>
+
+      <MisChildren nombre='Berta'>
+          <h2> Apellido: Vergés</h2>
+      </MisChildren>        
+
+
+      <MisChildren nombre='Berta' children="Mis hijos">
+          <h2> Apellido: Vergés</h2>
+      </MisChildren>
+
+      <MisChildren nombre='Berta' children="Mis hijos" /* Evitar props llamadas children -> sobreescriben */>
+      </MisChildren>        
+<hr/>
+
+</div>
   );
 }
 
