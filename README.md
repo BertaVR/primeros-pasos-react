@@ -1,7 +1,7 @@
 # primeros-pasos-react
 ## Descripción
 Este es un repositorio para aprender a utilizar la librería React. 
-En él voy subiendo ejemplos de los conceptos de react que voy aprendiendo a medida que vpy completando el curso.
+En él voy subiendo ejemplos de los conceptos de react que voy aprendiendo a medida que voy completando el curso.
 Sirve a modo de apuntes
 
 ## Funcionamiento
