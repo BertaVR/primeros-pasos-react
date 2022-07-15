@@ -2,6 +2,7 @@ import "./App.css";
 import {ComponenteEventosClase, ComponenteEventosFuncion} from "./components/ComponenteEventos";
 import LoginControl from "./components/LogIn/LoginControl";
 import Mensajes from "./components/Mensajes";
+import MouseColor from "./components/MouseColor";
 
 function App() {
   let mensajesNuevos = 50;
@@ -20,6 +21,9 @@ function App() {
       <ComponenteEventosFuncion />
       <h2> Hecho como componente de clase</h2>
       <ComponenteEventosClase/>
+      <hr />
+      <h1> Ejercicio 4 - colores</h1>
+      <MouseColor/>
     </div>
   );
 }
