@@ -9,7 +9,6 @@ export default function MouseColor() {
   const [color, setColor] = useState(colorInicial);
 
   const manejoMovimientoRaton = (e) => {
-    console.log("hola")
     e.preventDefault();
     if (!stopColor) {
       setColor({
@@ -18,15 +17,15 @@ export default function MouseColor() {
         blue: e.clientX,
       });
     }
+    console.log(color);
   };
   return (
     <div
-    onMouseMove={manejoMovimientoRaton}
+      onMouseMove={manejoMovimientoRaton}
       className="contenedor"
       style={{
-          backgroundColor: `rgb(${color.red}, ${color.green},${color.blue})`,
-        }}>
-    
-    </div>
+        backgroundColor: `rgb(${color.red}, ${color.green},${color.blue})`,
+      }}
+    ></div>
   );
 }
