@@ -1,4 +1,5 @@
 import "./App.css";
+import ComponenteEventos from "./components/ComponenteEventos";
 import LoginControl from "./components/LogIn/LoginControl";
 import Mensajes from "./components/Mensajes";
 
@@ -13,6 +14,9 @@ function App() {
       <hr />
       <h1> Ejercicio 2 (renderizado condicional)</h1>
       <Mensajes mensajesSinLeer={mensajesNuevos} />
+      <hr />
+      <h1> Ejercicio 3 (binding)</h1>
+      <ComponenteEventos />
     </div>
   );
 }
