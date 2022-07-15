@@ -8,13 +8,15 @@ const ComponenteEventos = () => {
     setTexto(texto + e.key);
   }
 
-  function manejarDown(){};
+  function manejarDown(e){
+    if(e.which === 8) setTexto(texto.slice(0, -1))
+  };
 
   var [texto, setTexto] = useState(textoInicial);
 
   return (
     <div>
-      <textArea onKeyDown={manejarDown} onKeyPress={manejarPulsacionesTeclado}></textArea>
+      <input type="text" onKeyDown={manejarDown} onKeyPress={manejarPulsacionesTeclado}></input>
       <p>{texto}</p>
     </div>
   );
