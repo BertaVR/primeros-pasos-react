@@ -1,5 +1,5 @@
 import "./App.css";
-import ComponenteEventos from "./components/ComponenteEventos";
+import {ComponenteEventosClase, ComponenteEventosFuncion} from "./components/ComponenteEventos";
 import LoginControl from "./components/LogIn/LoginControl";
 import Mensajes from "./components/Mensajes";
 
@@ -16,7 +16,10 @@ function App() {
       <Mensajes mensajesSinLeer={mensajesNuevos} />
       <hr />
       <h1> Ejercicio 3 (binding)</h1>
-      <ComponenteEventos />
+      <h2> Hecho como componente de función</h2>
+      <ComponenteEventosFuncion />
+      <h2> Hecho como componente de clase</h2>
+      <ComponenteEventosClase/>
     </div>
   );
 }
