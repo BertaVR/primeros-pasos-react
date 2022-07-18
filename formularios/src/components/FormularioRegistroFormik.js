@@ -50,9 +50,7 @@ const FormularioRegistroFormik = () => {
       })}
       onSubmit={(values, { setSubmitting }) => {
         console.log("ENVIANDO...");
-        const valoresAMostrar = JSON.parse(JSON.stringify(values));
-        delete valoresAMostrar["contraseña"];
-        delete valoresAMostrar["repetirContraseña"];
+        const {  contraseña, repetirContraseña, ...valoresAMostrar } = values;
 
         console.table(valoresAMostrar); // printo los valores del formulario
         setSubmitting(false);
