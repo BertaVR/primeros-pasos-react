@@ -3,7 +3,7 @@ import React from "react";
 import { Formik } from "formik";
 //  Hacer uso de yup para validación
 import * as Yup from "yup";
-import "../styles/Formik.css";
+import "./styles/Formik.css";
 
 const FormularioLoginFormik = () => {
   return (
