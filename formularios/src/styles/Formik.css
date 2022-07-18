@@ -1,0 +1,11 @@
+input.error{
+    color: tomato;
+    font-weight: bolder;
+    border: 2pz solid tomato;
+}
+
+.input-error{
+    color: tomato;
+    font-size: smaller0;
+}
+
