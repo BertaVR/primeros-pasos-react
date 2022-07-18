@@ -22,7 +22,7 @@ const FormularioRegistroFormik = () => {
       initialValues={{
         nombre: "",
         email: "",
-        país: "España",
+        país: "",
         contraseña: "",
         repetirContraseña: "",
       }}
@@ -33,13 +33,14 @@ const FormularioRegistroFormik = () => {
         email: Yup.string("Por favor, indique un email de contacto")
           .email("El formato de email no es correcto")
           .required("Por favor, indique un email de contacto"),
+          país: Yup.string().required('Por favor, seleccione un país'),
         contraseña: Yup.string()
           .matches(
             /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,16}$/,
             "La contraseña debe contener al menos una mayúscula, una minúscula, un número y un símbolo, y debe tener entre 8 y 16 caracteres"
           )
           .required("Por favor, indique una contraseña"),
-        
+
         repetirContraseña: Yup.string()
           .oneOf(
             [Yup.ref("contraseña"), null],
@@ -49,7 +50,7 @@ const FormularioRegistroFormik = () => {
       })}
       onSubmit={(values, { setSubmitting }) => {
         console.log("ENVIANDO...");
-        const valoresAMostrar  = JSON.parse(JSON.stringify(values));
+        const valoresAMostrar = JSON.parse(JSON.stringify(values));
         delete valoresAMostrar["contraseña"];
         delete valoresAMostrar["repetirContraseña"];
 
@@ -141,6 +142,7 @@ const FormularioRegistroFormik = () => {
               onBlur={handleBlur}
               className={errors.país && touched.v && "error"}
             >
+              <option value="">Seleccione un país</option>
               <option value="españa">España</option>
               <option value="francia">Francia</option>
               <option value="Portugal">Portigal</option>
