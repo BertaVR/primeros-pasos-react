@@ -1,3 +1,23 @@
+form{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+
+label{
+    margin-bottom: 0.5em;
+    height: 2em;
+}
+
+label, input, button{
+    width: 20%;
+    
+}
+
+
 input.error{
     color: tomato;
     font-weight: bolder;
@@ -9,3 +29,10 @@ input.error{
     font-size: smaller0;
 }
 
+button{
+    background-color: aqua;
+    color: mediumseagreen;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 2em;
+}
