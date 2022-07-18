@@ -6,7 +6,7 @@ Sirve a modo de apuntes.
 
 ## Funcionamiento
 Cada uno de los directorios que hay en la carpeta raíz es un módulo npm así que para arrancarlo habrá que cambiar
-la ubicación al directorio deseado (cd <directorio> e instalar sus dependencias:
+la ubicación al directorio deseado ('cd nombreDirectorio') e instalar sus dependencias:
 ```shell script
  npm i
 ```
