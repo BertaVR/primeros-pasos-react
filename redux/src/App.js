@@ -1,10 +1,12 @@
-import './App.css';
-import TodosContainer from './containers/TodosContainer';
+import "./App.css";
+import TodosContainer from "./containers/TodosContainer";
+import TodoFormContainer from "./containers/TodoFormContainer";
 
 function App() {
   return (
     <div className="App">
-      <TodosContainer/>
+      <TodoFormContainer />
+      <TodosContainer />
     </div>
   );
 }

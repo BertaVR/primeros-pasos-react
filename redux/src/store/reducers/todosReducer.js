@@ -1,4 +1,4 @@
-let initialState = [{id:0, text: 'Todo de prueba', completed:false}];
+let initialState = [];
 
 
 const todosReducer = (state = initialState, action) => {

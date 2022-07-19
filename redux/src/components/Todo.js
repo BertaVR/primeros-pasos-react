@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 /**
  *
- * @param {onclicK} func
+ * @param {onClick} func
  * Método par cambiar la propiedad "completed del componente true - false"
  * @param {completed} bool
  * Valor booleano para vomprobar si el Todo está completo o no
