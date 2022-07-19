@@ -28,7 +28,7 @@ const Todo = ({ onClick, completed, text, id }) => {
         textDecorationColor: completed ? "green" : "none",
         color: completed ? "#355E3B" : "black",
         backgroundColor : completed ? "#98FB98" : "white",
-        fontWeight: completed ? "bolder" : "none",
+        fontWeight: completed ? "bolder" : "normal",
 
 
       }}
