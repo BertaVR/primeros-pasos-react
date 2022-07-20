@@ -21,7 +21,7 @@ const TodoForm = ({submit}) => {
             }>
                 {/* Nuestro input para crear Todos */}
                 <input type='text' ref={todoText} />
-                <button type='submit'>Crear Todo</button>
+                <button type='submit'>Crear Tarea</button>
             </form>
         </div>
     );
