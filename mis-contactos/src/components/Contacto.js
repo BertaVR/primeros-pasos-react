@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+// TODO: filtro nombre
+// TODO: filtro sectr
+// TODO: mostrar- ocultar contactos
+// TODO: Eliminar contacto
 /**
  *
  * @param {string} nombre
