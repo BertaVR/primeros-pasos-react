@@ -35,3 +35,9 @@ button{
     text-transform: uppercase;
     padding: 0.5em;
 }
+
+.finanzas {background-color: rgb(106, 106, 188);}
+
+.alimentación {background-color: rgb(236, 170, 90);}
+
+.tecnológico{background-color: rgb(156, 217, 121);}

@@ -17,7 +17,7 @@ import PropTypes from "prop-types";
  */
 const Contacto = ({ nombre, teléfono, email, empresa, sector, apellidos }) => {
   return (
-    <li>
+    <li className={sector}>
       <ul className="contacto">
         <li key={"nombre"} >  Nombre: {nombre} {apellidos} </li>
         <li key={"telefono"}> Teléfono: {teléfono}</li>
