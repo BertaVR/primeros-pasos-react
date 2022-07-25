@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-
+import { borrarContacto } from '../store/actions/actions';
 import ContactoList from '../components/ContactoList';
 
 /**
@@ -19,8 +19,10 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
-
+        onBorrarClick: (id) => {
+            // Despacha la acción que actualiza el store
+            dispatch(borrarContacto(id)); // LO QUE REALMENTE SE EJECUTA ES ESTO
+        },
     }
 }
 

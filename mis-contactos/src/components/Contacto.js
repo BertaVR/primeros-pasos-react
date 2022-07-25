@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import BorrarContacto from "./BorrarContacto";
 // TODO: filtro nombre
 // TODO: filtro sectOr
 // TODO: mostrar- ocultar contactos
@@ -26,8 +25,7 @@ const Contacto = ({
   empresa,
   sector,
   apellidos,
-  id,
-  onBorrarCick,
+  onClick,
 }) => {
   return (
     <li className={sector}>
@@ -41,7 +39,7 @@ const Contacto = ({
       <p key={"email"}>Email: {email}</p>
       <p key={"empresa"}> Empresa:{empresa}</p>
       <p key={"sector"}> Sector: {sector}</p>
-      <BorrarContacto onClick={onBorrarCick(id)}></BorrarContacto>
+      <button onClick={onClick}>Borrar</button>
     </li>
   );
 };
@@ -52,13 +50,13 @@ const Contacto = ({
  * un string (text)
  */
 Contacto.propTypes = {
+  onClick: PropTypes.func.isRequired,
   nombre: PropTypes.string.isRequired,
   teléfono: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   empresa: PropTypes.string.isRequired,
   sector: PropTypes.string.isRequired,
   apellidos: PropTypes.string,
-  onBorrarClick: PropTypes.func.isRequired,
 };
 
 export default Contacto;

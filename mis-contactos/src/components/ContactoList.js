@@ -7,7 +7,7 @@ import Contacto from "./Contacto";
  * @param {object} contactos
 ¡¡
  */
-const ContactoList = ({ contactos }) => {
+const ContactoList = ({ contactos, onBorrarClick }) => {
     const h1 =  <h1>Mi Lista de Contactos </h1>;
     if (contactos.length<1) {
         return (
@@ -25,6 +25,10 @@ const ContactoList = ({ contactos }) => {
             <Contacto
               key={contacto.id}
               {...contacto} //
+              
+              onClick={() => onBorrarClick(contacto.id)}
+
+
             />
           ))}
         </ul>
@@ -45,6 +49,7 @@ ContactoList.propTypes = {
       apellidos: PropTypes.string,
     }).isRequired
   ).isRequired,
+  onBorrarClick: PropTypes.func.isRequired,
 };
 
 export default ContactoList;
