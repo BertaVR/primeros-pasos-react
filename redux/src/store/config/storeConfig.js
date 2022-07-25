@@ -10,7 +10,6 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { watcherSaga } from "../sagas/sagas";
 import createSagaMiddleware from "redux-saga";
 
-const store = createStore(rootReducer, composeWithDevTools());
 
 // SAGAS -> nos traemos nuestro WatcherSaga para ponerlo a esuchar
 export function createStoreWithSagaMiddleware() {
