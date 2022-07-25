@@ -26,3 +26,13 @@ export const addContacto = (nombre, email, empresa, teléfono, sector, apellidos
         }
     }
 }
+
+
+export const borrarContacto = (id) => {
+    return{
+        type: 'BORRAR_CONTACTO',
+        payload:{
+            id
+        }
+    }
+}

@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import BorrarContacto from "./BorrarContacto";
 // TODO: filtro nombre
-// TODO: filtro sectr
+// TODO: filtro sectOr
 // TODO: mostrar- ocultar contactos
 // TODO: Eliminar contacto
 /**
@@ -18,16 +19,29 @@ import PropTypes from "prop-types";
  *
  * @param  { ("finanzas"| "tecnológico"| "alimentación")} sector
  */
-const Contacto = ({ nombre, teléfono, email, empresa, sector, apellidos }) => {
+const Contacto = ({
+  nombre,
+  teléfono,
+  email,
+  empresa,
+  sector,
+  apellidos,
+  id,
+  onBorrarCick,
+}) => {
   return (
     <li className={sector}>
-      <ul className="contacto">
-        <li key={"nombre"} >  Nombre: {nombre} {apellidos} </li>
-        <li key={"telefono"}> Teléfono: {teléfono}</li>
-        <li key={"email"}>Email: {email}</li>
-        <li key={"empresa"}> Empresa:{empresa}</li>
-        <li key={"sector"}> Sector: {sector}</li>
-      </ul>
+      <p key={"nombre"}>
+        {" "}
+        <b>
+          {nombre} {apellidos}
+        </b>{" "}
+      </p>
+      <p key={"telefono"}> Teléfono: {teléfono}</p>
+      <p key={"email"}>Email: {email}</p>
+      <p key={"empresa"}> Empresa:{empresa}</p>
+      <p key={"sector"}> Sector: {sector}</p>
+      <BorrarContacto onClick={onBorrarCick(id)}></BorrarContacto>
     </li>
   );
 };
@@ -37,13 +51,14 @@ const Contacto = ({ nombre, teléfono, email, empresa, sector, apellidos }) => {
  * Tendremos un función (onClick), un booleano (completed) y
  * un string (text)
  */
- Contacto.propTypes = {
+Contacto.propTypes = {
   nombre: PropTypes.string.isRequired,
   teléfono: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   empresa: PropTypes.string.isRequired,
   sector: PropTypes.string.isRequired,
   apellidos: PropTypes.string,
+  onBorrarClick: PropTypes.func.isRequired,
 };
 
 export default Contacto;

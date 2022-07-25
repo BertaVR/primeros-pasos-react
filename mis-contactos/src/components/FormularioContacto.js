@@ -16,7 +16,7 @@ export default function FormularioContacto({ submit }) {
     <Formik
       onSubmit={() => {
         console.log("");
-        let fields = [
+        var fields = [
           nombre.current.value,
           email.current.value,
           empresa.current.value,
@@ -25,9 +25,7 @@ export default function FormularioContacto({ submit }) {
           apellidos.current.value,
         ];
         submit(...fields);
-        fields.foreach((f) => {
-          f = "";
-        });
+        
       }}
       initialValues={{
         nombre: "",
