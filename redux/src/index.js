@@ -5,9 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 // Nos traemos el STORE de la aplicación
-import store from "./store/config/storeConfig";
+import {createStoreWithSagaMiddleware} from "./store/config/storeConfig";
 // Nos traemos el PROVIDER de React Reduux -> muy parecido al hook useContect()
 import { Provider } from "react-redux";
+
+
+// Creamos el store de la aplicación
+// a partir de lo que nos devuelve la f 'createStoreWithSagaMiddleware'
+
+let store = createStoreWithSagaMiddleware();
 
 ReactDOM.render(
   <Provider store={store}>
