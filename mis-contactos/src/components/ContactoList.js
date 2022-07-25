@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Contacto from "./Contacto";
-import { borrarContacto } from "../store/actions/actions";
 
 /**
  * 
