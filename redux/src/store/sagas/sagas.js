@@ -45,6 +45,7 @@ export function* workerSaga(action) {
       type: action.payload.okAction,
       payload: token,
     });
+    console.log(token)
   } catch (error) {
     yield put({
       type: action.payload.failAction,

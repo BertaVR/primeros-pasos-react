@@ -1,0 +1,43 @@
+form{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+}
+
+label{
+    margin-bottom: 0.5em;
+    height: 2em;
+}
+
+label, input, button{
+    width: 20%;
+    
+}
+
+
+input.error{
+    color: tomato;
+    font-weight: bolder;
+    border: 2px solid tomato;
+}
+
+.input-error{
+    color: tomato;
+    font-size: smaller0;
+}
+
+button{
+    margin-top: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 0.5em;
+}
+
+.finanzas {background-color: rgb(106, 106, 188);}
+
+.alimentación {background-color: rgb(236, 170, 90);}
+
+.tecnológico{background-color: rgb(156, 217, 121);}
