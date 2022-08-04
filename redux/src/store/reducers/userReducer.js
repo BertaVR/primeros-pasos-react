@@ -20,13 +20,13 @@ export function userReducer(state = initialState, action) {
         fetching: false,
         error: null,
         logged: true,
-        token: action.payload.token,
+        token: action.payload,
       };
     case "API_CALL_FAILURE":
       return {
         ...state,
         fetching: false,
-        error: action.payload.error,
+        error: action.payload,
         logged: false,
         token: null,
       };
