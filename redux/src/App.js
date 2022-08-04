@@ -1,11 +1,9 @@
 import "./App.css";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Profile from "./pages/Profile";
 import React from "react";
+import { connect } from "react-redux";
 // Import para gestión de rutas:
 import {
-  Redirect,
+  Navigate ,
   BrowserRouter as Router,
   Route,
   Routes,
@@ -20,17 +18,30 @@ import {
  * para poder navegar entre vistas de componentes
  * que acrúan como páginas
  */
+ import Home from "./pages/Home";
+ import Login from "./pages/Login";
+ import Profile from "./pages/Profile";
 
-function App() {
+
+
+
+function App({logged}) {
   return (
     <Router>
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/profile" exact element={<Profile />} />
+        <Route path="/profile" exact element={logged? <Profile /> : <Navigate  to='/login' replace={true} />} />
         <Route path="/login" exact element={<Login />} />
       </Routes>
     </Router>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return  {
+    logged: state.userState.logged
+  }
+}
+
+const AppContainer = connect(mapStateToProps)(App)
+export default AppContainer;

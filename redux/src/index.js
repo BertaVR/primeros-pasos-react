@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import AppContainer from './App';
 
 // Nos traemos el STORE de la aplicación
 import { createStoreWithSagaMiddleware } from './store/config/storeConfig';
@@ -17,7 +17,7 @@ ReactDOM.render(
   <Provider store={store}>
     {/*  Aquí dentro ya estaría disponible el STORE de REDUX con el ROOTREDUCER ASOCIADO */}
     <React.StrictMode>
-      <App />
+      <AppContainer />
     </React.StrictMode>
   </Provider>,
   document.getElementById('root')
